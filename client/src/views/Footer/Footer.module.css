@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    max-width: auto;
+
+    max-height: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 30px 0 10px;
+    gap: 5px;
+    font-family: 'Montserrat';
+    background-color: var(--azul-oscuro);
+  }
+  .text_footer {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  
+  @media screen and (max-width: 375px) {
+    .text_footer {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gris-placeholder);
+    }
+ 
+  }
+  
+  @media screen and (max-width: 300px) {
+    .text_footer {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--gris-placeholder);
+    }
+   
+  }

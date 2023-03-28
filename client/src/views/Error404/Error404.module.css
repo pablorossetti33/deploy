@@ -1,0 +1,23 @@
+.containerError {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--amarillo);
+  font-family: "Montserrat";
+  font-size: 18px;
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.img404 {
+    align-items: center;
+    width: 690px;
+  }
