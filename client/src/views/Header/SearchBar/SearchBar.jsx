@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCountriesByName } from "../../../redux/actions";
-// import search_icon from "../../../images/search-icon.svg";
+import search_icon from "../../../images/search-icon.png";
 import style from "./SearchBar.module.css"
 import { Link } from "react-router-dom";
 
