@@ -15,7 +15,7 @@ export const FILTER_BY_ACTIVITY = "FILTER_BY_ACTIVITY";
 export const getCountries = () => {
   return async function (dispatch) {
     try {
-      const apiData = await axios.get("http://localhost:3001/countries");
+      const apiData = await axios.get("/countries");
       const countries = apiData.data;
       dispatch({ type: GET_COUNTRIES, payload: countries });
     } catch (error) {
@@ -27,7 +27,7 @@ export const getCountries = () => {
 export const getActivities = () => {
   return function (dispatch) {
     return axios
-      .get("http://localhost:3001/activities")
+      .get("/activities")
       .then((apiData) => {
         const activities = apiData.data;
         dispatch({ type: GET_ACTIVITIES, payload: activities });
@@ -38,12 +38,12 @@ export const getActivities = () => {
   };
 };
 
+
 export const getDetail = (id) => {
   return async function (dispatch) {
     try {
-      const apiDataId = await fetch(`http://localhost:3001/countries/${id}`);
-      const details = await apiDataId.json();
-      dispatch({ type: GET_DETAILS, payload: details });
+      const { data } = await axios.get(`/countries/${id}`);
+      dispatch({ type: GET_DETAILS, payload: data });
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +55,7 @@ export const getCountriesByName = (name) => {
   return async function (dispatch) {
     try {
       const apiDataByName = await axios.get(
-        `http://localhost:3001/countries?name=${name}`
+        `/countries?name=${name}`
       );
       const byName = apiDataByName.data;
       dispatch({
@@ -71,7 +71,7 @@ export const getCountriesByName = (name) => {
 export const activityPost = (payload) => {
   return async function (dispatch) {
     try {
-      await axios.post("http://localhost:3001/activities", payload);
+      await axios.post("/activities", payload);
       alert("Activity created successfully");
       return dispatch({
         type: ACTIVITY_POST,

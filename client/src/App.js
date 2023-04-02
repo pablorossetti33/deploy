@@ -1,6 +1,8 @@
 import "./App.css";
 import { Home, Landing, Detail, NewActivity, Error404 } from "./views";
 import { Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001/";
 
 function App() {
   return (
